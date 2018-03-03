@@ -33,11 +33,11 @@ def scraping(first_name="", last_name="", driver=None):
     try:
         driver.get(url)
         row = driver.find_elements_by_css_selector("tr.person-result > td")
-        name = row[0]
-        position = row[1]
-        address = row[3]
-        phone_num = row[4]
-        mail = row[5]
+        name = row[0].text
+        position = row[1].text
+        address = row[3].text
+        phone_num = row[4].text
+        mail = row[5].text
     except:
         name = ""
         position = ""
